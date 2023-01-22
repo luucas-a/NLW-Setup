@@ -1,0 +1,110 @@
+* {
+  margin: 0; /* margem geral */
+  padding: 0; /* preenchimento geral */
+  box-sizing: border-box; /* informa ao navegador para considerar qualquer borda e preenchimento nos valores especificados para a largura e a altura de um elemento. Isso geralmente torna muito mais fácil dimensionar os elementos */
+}
+
+body {
+  background-color: #09090a; /* Cor do corpo */
+  color: white; /* cor do texto */
+
+  height: 100vh; /* altura */
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 48px; /* Preenchimento interno, para não ficar apertado as caixas */
+
+  position: fixed;
+  width: 100%;
+  background-color: #09090a;
+}
+
+button {
+  padding: 16px 24px; /* preenchimento */
+  border-radius: 8px; /* Arredondamento da borda */
+  border: 1px solid #8b5cf6; /* estilo da borda */
+  background-color: transparent; /* cor do botão */
+  color: white; /* cor do texto dentro do botão */
+
+  display: flex; /* deixar a borda flexível, assim conseguimos alinhar o nome com icon +  */
+  align-items: center; /* alinhamento texto com icon */
+  gap: 12px; /* Espaço entre os elementos */
+
+  font-family: "Inter"; /* Familia da fonte */
+  font-weight: 600; /* Peso da fonte, grossura da fonte */
+  font-size: 16px; /* Tamanho da fonte */
+  line-height: 125%; /* Altura da linha */
+}
+#form-habits {
+  display: flex;
+
+  padding: 182px 48px 48px;
+  width: fit-content;
+}
+
+.habits {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+
+  gap: 24px;
+}
+
+.habit {
+  width: 64px;
+  height: 64px;
+
+  font-size: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.days {
+  display: flex;
+  gap: 48px;
+  margin-left: 32px;
+}
+
+.day {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.day div {
+  margin-bottom: 8px;
+
+  font-family: "Roboto Mono";
+  font-size: 20px;
+  line-height: 125%;
+
+  color: #a1a1aa;
+
+  text-align: center;
+}
+input {
+  appearance: none; /* para poder modificar a borda */
+  -webkit-appearance: none; /* propriedade para funcionar no safari, chrome e afins */
+  width: 64px;
+  height: 64px;
+
+  border: 2px solid #27272a;
+  border-radius: 8px;
+
+  background: #18181b;
+}
+input:checked {
+  /* pseudo-selector */
+  background: #8b5cf6;
+  border: 2px solid #a78bfa;
+}
+@media (max-width: 570px) { /* Responsividade CSS, caso encolha a largura do navegador, o nome "registrar meu dia" ira sumir ficando só botão. */
+  button div {
+    display: none;
+  }
+
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br"> <!--Linguagem da pagina-->
+
+  <head>
+    <!-- passar informações ao navegador que não serão apresentadas na tela para o usuário. É dentro dessa tag, por exemplo, que pedimos para o navegador carregar um arquivo CSS dentre outras coisas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Roboto+Mono:ital,wght@0,700;1,700&family=Roboto:wght@300&display=swap"
+      rel="stylesheet" />
+    <meta charset="UTF-8">
+    <!--Este item chaveia a tabela de caracteres que vai ser utilizada pelo sistema.
+      é o elemento padrão mais utilizado, também conhecido como Unicode ou Conjunto de Caracteres Codificados Universal.-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- para ser compatível com edge, explorer-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tag usada para o site se enquadrar proporcionalmente nas telas de celulares -->
+    <title>Habits</title> <!--Titulo da pagina-->
+    <link rel="stylesheet" href="./style.css"> <!-- linkar nosso HTML ao CSS-->
+  </head>
+
+  <body>
+    <header> <!--é utilizada dentro da tag body para representar o cabeçalho da página -->
+      <img src="./assets/logo.svg" alt="Logo marca do Aplicativo apps" /> <!--imagem da marca -->
+      <button> <!-- Botão com texto e icon -->
+        <img src="./assets/plus.svg" alt="ícone sinal de mais roxo" /> <!--Icon sinal + -->
+        <div>
+          Registrar meu dia
+        </div>
+      </button>
+    </header>
+    
+    <form id="form-habits">
+      <div class="habits">
+        <div class="habit" data-name="run">🏃‍♂️</div>
+        <div class="habit" data-name="water">💧</div>
+        <div class="habit" data-name="food">🍎</div>
+        <div class="habit" data-name="journal">📕</div>
+        <div class="habit" data-name="takePills">💊</div>
+        
+      </div>
+
+      <div class="days"></div>
+    </form>
+    <script src="https://cdn.jsdelivr.net/gh/maykbrito/libs/NLWSetup/source/NLWSetup.js"></script>
+    <script src="./scrip.js"></script>
+  </body>
+
+</html>
+
+<!-- Box model 
+    - Tudo São Caixas
+        Todos os elementos HTML serão considerados uma caixa, assim como uma caixa de papelão.
+    - Caixas possuem determinadas propriedades.
+        Conteúdo, Largura, Altura, Borda, Preenchimento(espaço interno), Espaçamento (espaço externo)
+    - EM ORDEM DE FORA PRA DENTRO.
+        - top, left, right, bottom
+        - margin (margem, espaço ao redor da caixa)
+        - border (borda)
+        - padding (preenchimento)
+        - Element Content( height(altura), width(largura))
+-->
